@@ -253,6 +253,7 @@ on c.film=w.film where a.status='Won' and role_type in
 Insight: The result is shown on the table.
 
 4.	Genre Trends and Film Characteristics:
+   
 a.	Which genres (Adventure, Comedy, Fantasy, etc.) are most common among Pixar films?
 ```sql
 select value,count(*) as count, case when count(*) between 1 and 5 then 'not really watch' when count(*) between 6 and 25 then 'average'
