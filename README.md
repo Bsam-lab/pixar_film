@@ -241,7 +241,7 @@ b. How does winning an Oscar impact a film's financial success?
 select a.film,count(a.film) as number_of_winning,b.box_office_worldwide from academy as a join
 box_office as b on a.film=b.film where a.status= 'Won' group by 1,3 order by 2 desc,3 desc;
 ```
-Insight: from this table we can see that income did not determine winning of award. 
+Insight: From this table we can see that income did not determine winning of award. 
 
 c.	Which directors and writers have worked on the most award-winning Pixar films?
 ```sql
