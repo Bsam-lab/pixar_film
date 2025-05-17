@@ -158,8 +158,6 @@ Insight: This analysis calculates the Return on Investment (ROI) for each Pixar 
 
 2nd Decade (2006–2015)
 
-```
-
 3rd Decade (2016–present)
 
 📊 Key Findings:
