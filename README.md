@@ -259,7 +259,7 @@ a.	Which genres (Adventure, Comedy, Fantasy, etc.) are most common among Pixar f
 select value,count(*) as count, case when count(*) between 1 and 5 then 'not really watch' when count(*) between 6 and 25 then 'average'
 else 'most-common' end as category from genres where category = "Genre" group by 1;
 ```
-Insight: Adventure and animation are most common genre in pixal films.
+Insight: Adventure and animation are most common genres in pixal films.
 
 b.	What is the average runtime of Pixar films over different periods, and does it affect box office performance?
 i. What is the average runtime of Pixar films over different periods.
