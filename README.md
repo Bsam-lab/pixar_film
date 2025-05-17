@@ -145,7 +145,7 @@ limit 1;
 Insight: The movie Inside out 2 make the highest return of investment(roi) with 1498030965 value.
 
 ii. and how does this compare across different decades?
-``sql
+```sql
 with decade as(select b.film,b.budget,b.box_office_worldwide,b.box_office_worldwide - b.budget as Roi,p.release_date,case when year(p.release_date) between 1995 and 2005 then '1st' 
 when year(p.release_date) between 2006 and 2015 then '2nd' else '3rd' end as decades from box_office as b join pixar_film as p on b.film=p.film),
 sum_roi as(select decades , sum(Roi) as Total_ROI from decade group by 1),
