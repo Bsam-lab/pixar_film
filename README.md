@@ -163,6 +163,7 @@ Insight: This analysis calculates the Return on Investment (ROI) for each Pixar 
 📊 Key Findings:
 1. Top ROI Films:
 Individual films like "Toy Story", "Finding Nemo", and "Inside Out" generated the highest ROI, where modest production budgets led to massive worldwide box office returns.
+
 Decade-Level ROI Trends:
 
 1st Decade (1995–2005):
@@ -173,11 +174,12 @@ This period shows the highest total ROI, driven by hits like Up, Inside Out, and
 
 3rd Decade (2016–present):
 While successful films like Coco and Soul emerged, the overall ROI growth has slowed, likely due to increasing budgets, market saturation, and the impact of streaming and the COVID-19 pandemic on box office earnings.
+
 Percentage Growth Comparison:
 
 The 2nd decade saw a significant percentage increase in ROI over the 1st, showcasing Pixar's commercial peak.
 
-The 3rd decade showed a decline or slower growth, indicating shifts in the industry and consumption models.
+The 3rd decade showed a slower growth, indicating shifts in the industry and consumption models.
 
 
 2.	Audience and Critical Reception:
