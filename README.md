@@ -193,6 +193,7 @@ join box_office as b on p.film=b.film order by 3 desc;
 Insight: From the result, it show that audience rating did not influence the income.
 
 b. 	What is the distribution of Pixar films by CinemaScore rating, and how does it impact financial success?
+
 i. What is the distribution of Pixar films by CinemaScore rating.
 ```sql
 with cinema_rating as(select film,cinema_score, case when cinema_score='NA' then 'Not rated' when cinema_score='A-' then 'Less rated' when cinema_score='A' then 'Normal rating' when
