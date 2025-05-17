@@ -53,4 +53,33 @@ This combination of techniques enabled a comprehensive look at Pixar’s product
     - film(foreign key).
     - award_type: the nature of the award given.
     - status: current status.
+
+### Data Cleaning and Transformation
+
+To prepare the Pixar dataset for analysis, the following data cleaning and transformation steps were performed:
+
+1. Standardized Date Formats
+
+    - Converted release_date fields to consistent DATE format for accurate sorting and filtering.
+
+2. Trimmed and Cleaned Text Fields
+
+    - Removed extra spaces and standardized capitalization for film titles, genres, and names (e.g., "Toy story " → "Toy Story").
+
+3. Handled Missing Values
+
+    - Replaced or flagged nulls in key fields like box_offices and public_response.
+
+    - Excluded records with critical missing data (e.g., film name or release date).
+
+4. Unified Data Types
+
+    - Ensured numerical fields (like budget, box_offices, and run_time) were cast to proper numeric types for calculations.
     
+5. Created Derived Columns
+
+    - Added calculated fields like profit (box_office_worldwide - budget) and year (extracted from release_date).
+
+6. Resolved Duplicates and Inconsistencies
+
+    - Deduplicated film records across tables using film name and release date as unique keys.
