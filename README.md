@@ -325,3 +325,27 @@ order by 4 limit 1)
 select * from cleaned_pixar_people where film=(select film from critically_film);
 ```
 Insight: As seen in the table.
+
+### Recommendation
+Based on the analysis of Pixar's box office and critical success, the following recommendations can help maintain and enhance their future impact:
+
+1. Continue Focusing on Original, Emotion-Driven Stories
+Pixar’s strength lies in its ability to tell heartfelt, meaningful stories. Maintaining this creative focus will preserve its emotional connection with audiences across all age groups.
+
+2. Balance Films with Original Content
+While films like Inside out 2,Toy Story 4 and Incredibles 2 perform well financially, Pixar should also invest in fresh ideas like Turning red,Soul and Onward, which bring innovation and critical acclaim.
+
+3. Preserve High Animation and Production Quality
+Pixar’s reputation is built on excellence in visual storytelling. Continuing to invest in advanced animation technology and strong art direction will help maintain this standard.
+
+4. Appeal to a Global Audience
+Pixar should continue to include diverse characters and culturally rich stories to connect with international viewers and expand its reach.
+
+5. Strengthen Marketing and Release Timing
+Strategic release dates (e.g., summer, holidays) and strong promotional campaigns contribute greatly to box office results. These should remain a priority for future releases.
+
+### Conclusion
+Pixar stands as a unique force in the film industry, consistently achieving both box office success and critical acclaim. With multiple films surpassing the billion-dollar mark, Pixar has proven its ability to captivate global audiences. At the same time, its commitment to emotionally rich storytelling, innovative animation, and universal themes has earned it widespread praise from critics and numerous prestigious awards, including multiple Academy Awards.
+
+
+This combination of financial power and artistic quality is what sets Pixar apart from most studios. It doesn't just create movies for children — it creates meaningful, thought-provoking stories that resonate with all ages. Through this balance, Pixar has established itself not only as a commercial powerhouse but also as a cultural and creative icon in modern cinema.
