@@ -210,14 +210,9 @@ Not rated:3
 
 ii. and how does it impact financial success?
 ```sql
-select p.film, p.cinema_score, b.box_office_worldwide, b.box_office_worldwide - b.budget as roi
+select p.film, p.cinema_score, b.box_office_worldwide, b.box_office_worldwide - b.budget as roi,case when b.box_office_worldwide - b.budget > 1000000000 then 'high profit' 
+when b.box_office_worldwide - b.budget >500000000 then 'profitable' when b.box_office_worldwide - b.budget > 0 then 'low profit' else 'loss' end as rating
 from public_response as p join box_office as b on p.film=b.film order by 3 desc;
-```
-or 
-```sql
-with cinema_rating as(select film,cinema_score, case when cinema_score='NA' then 'Not rated' when cinema_score='A-' then 'Less rated' when cinema_score='A' then 'Normal rating' when
-cinema_score='A+' then 'Highly rated' end as Distribution from public_response)
-select c.distribution,sum(b.box_office_worldwide - b.budget) as total_roi from cinema_rating as c join box_office as b on c.film=b.film group by 1;
 ```
 Insight: This show that high cinema rating lead to high return of investment(roi).
 
