@@ -223,8 +223,10 @@ Insight: This show that high cinema rating lead to high return of investment(roi
 
 c. 	Have audience ratings improved or declined over the years?
 ```sql
-with total as(select film,rotten_tomatoes_score + metacritic_score + imdb_score as total_audience_rating from public_response order by 2 desc)
-select p.film, t.total_audience_rating, year(p.release_date) as year from pixar_film as p join total as t on p.film=t.film order by 2 desc;
+with total as(select film,rotten_tomatoes_score + metacritic_score + imdb_score as total_audience_rating from public_response order by 2 desc),
+rating as (select p.film, t.total_audience_rating as total_audience_rating, year(p.release_date) as year from pixar_film as p join total as t on p.film=t.film order by 3)
+select *, lag(total_audience_rating,1,0) over (order by year ) as Previous_rating,concat(round(((total_audience_rating - lag(total_audience_rating,1,0) over (order by year ))
+/lag(total_audience_rating,1,0) over (order by year ))*100,2),'%') as percentage_rating from rating;
 ```
 Insight: From this table it is Fluctuating
 
