@@ -114,7 +114,40 @@ In years where multiple films were released, such as 2017 and 2019, Pixar mainta
 
 ii. What is the relationship between budget and box office earnings?
 ```sql
-select * from box_office;
+SELECT ((COUNT(*) * SUM(XY)) - (SUM(X) * SUM(Y))) / 
+SQRT( 
+	((COUNT(*) * SUM(X_squared)) - (SUM(X) * SUM(X))) * 
+	((COUNT(*) * SUM(Y_squared)) - (SUM(Y) * SUM(Y)))
+)
+AS Correlation_coefficient
+FROM (
+SELECT budget AS X, 
+	   box_office_us_canada AS Y, 
+	   budget * box_office_us_canada AS XY, 
+       budget * budget AS X_squared,
+       box_office_us_canada * box_office_us_canada AS Y_squared 
+       FROM box_office
+) AS Subquery;
+-- No Significant correlation btwn Budget and box office US/Canada ~~ A weak positive correlation 
+-- +0.1 - +0.3 = weak positive correlation
+
+
+SELECT ((COUNT(*) * SUM(XY)) - (SUM(X) * SUM(Y))) / 
+SQRT( 
+	((COUNT(*) * SUM(X_squared)) - (SUM(X) * SUM(X))) * 
+	((COUNT(*) * SUM(Y_squared)) - (SUM(Y) * SUM(Y)))
+)
+AS Correlation_coefficient
+FROM (
+SELECT budget AS X, 
+	   box_office_other AS Y, 
+	   budget * box_office_other AS XY, 
+       budget * budget AS X_squared,
+       box_office_other * box_office_other AS Y_squared 
+       FROM box_office
+) AS Subquery;
+-- No Significant correlation btwn Budget and box office International ~~ A weak positive correlation 
+-- +0.1 - +0.3 = weak positive correlation
 ```
 Insight: budget is the propose amount to be made why box office is the actual amount made.
 
